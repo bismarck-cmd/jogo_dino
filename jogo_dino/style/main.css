@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#game{
+    width: 650px;
+    height: 300px;
+    border: 1px solid black;
+}
+
+#personagem{
+    width: 45px;
+    height: 50px;
+    margin: 100px 0px 0px 15px;
+    position: relative;
+    top: 150px;
+}
+.dead{
+    background: url(../img/dino-dead.png);
+}
+.alive{
+    background: url(../img/dino-alive.png);
+}
+.mover{
+    animation: mover 500ms infinite linear;
+}
+.animar{
+    animation: personagem 500ms infinite;
+}
+@keyframes mover{
+    from {
+        background-image: url(../img/left.png);
+    }
+    to {
+        background-image: url(../img/right.png);
+    }
+}
+@keyframes personagem{
+    0%{top: 150px;}
+    30%{top: 25px;}
+    70%{top: 25px;}
+    100%{top: 150px;}
+}
+
+#cactu{
+    width: 20px;
+    height: 50px;
+    margin: 90px 0px 0px 50px;
+
+    position: relative;
+    animation: cactu 1s infinite linear;
+}
+
+@keyframes cactu{
+    0%{left: 480px;}
+    100%{left: -520px;}
+}
